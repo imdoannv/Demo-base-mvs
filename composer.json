@@ -1,0 +1,19 @@
+{
+    "name": "admin/bai6_base_mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyễn Đoàn",
+            "email": "nguyendoanjp12@gmail.com"
+        }
+    ],
+    "require": {
+        "phroute/phroute": "^2.2",
+        "illuminate/events": "^9.51"
+    }
+    
+}
