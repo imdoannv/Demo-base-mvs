@@ -20,8 +20,9 @@ $router->get('/', function(){
 });
 // Khu vực mình quan tâm --- start
 $router->get('test', [App\Controllers\ProductController::class, 'index']);
+$router->get('test1', [App\Controllers\CategoryController::class, 'index']);
 //Tạo mẫu 1 route trỏ đến đường dẫn trỏe đến addProduct trong ProductController
-$router->get('test1', [App\Controllers\ProductController::class, 'addProduct']);
+// $router->get('test1', [App\Controllers\ProductController::class, 'addProduct']);
 
 // Khu vực mình quan tâm --- end
 

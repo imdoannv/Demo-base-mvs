@@ -1,10 +1,19 @@
 <?php
 namespace App\Controllers;
-class ProductController{
-    public function index(){
-        echo "Đây là route test";
+
+use App\Models\Product;
+
+class ProductController extends BaseController{
+    public $product;
+    public function __construct(){
+        $this->product = new Product();
     }
-    public function addProduct(){
-        echo "Đây là mới nè";
+    public function index(){
+        // Goi phuong thuc getproduct trong nay
+        $products = $this->product->getProduct();
+
+        // Gọi view index vào đây và băn dứ liệu products sang
+        $this->render('product.index',compact('products'));
+
     }
 }
