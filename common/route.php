@@ -20,6 +20,12 @@ $router->get('/', function(){
 });
 // Khu vực mình quan tâm --- start
 $router->get('test', [App\Controllers\ProductController::class, 'index']);
+// Router add-product chỉ lấy đc view product
+// Router add-product-post thực hiện đc hành động thêm
+$router->get('add-product', [App\Controllers\ProductController::class, 'add']);
+$router->post('add-product-post', [App\Controllers\ProductController::class, 'postProduct']);
+
+// Category
 $router->get('test1', [App\Controllers\CategoryController::class, 'index']);
 //Tạo mẫu 1 route trỏ đến đường dẫn trỏe đến addProduct trong ProductController
 // $router->get('test1', [App\Controllers\ProductController::class, 'addProduct']);
